@@ -1,5 +1,28 @@
 # Todo App with Postgres
 
+## How to run with docker
+
+```bash
+docker compose up -d          # Postgres on port 5434
+cd server && npm install && npm start   # API on http://localhost:3001
+cd web && npm install && npm run dev    # UI  on http://localhost:4321
+```
+
+The `todos` table is created automatically on server start (`server/schema.sql`).
+
+### Endpoints
+
+| method | path | body |
+|---|---|---|
+| GET | `/todos` | — |
+| POST | `/todos` | `{ "task": "Buy groceries" }` |
+| PUT | `/todos/:id` | `{ "task": "..." }` and/or `{ "done": true }` |
+| DELETE | `/todos/:id` | — |
+
+---
+
+## Assignment brief
+
 Build a full-stack **Todo app**: a Node.js/Express API backed by a **PostgreSQL**
 database (via the `pg` library) with an **Astro** front end — the same stack we
 used in the class demo.
