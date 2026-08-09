@@ -4,7 +4,7 @@
 
 ```bash
 docker compose up -d          # Postgres on port 5434
-cd server && npm install && npm start   # API on http://localhost:3001
+cd server && npm install && npm start   # API on http://localhost:3000
 cd web && npm install && npm run dev    # UI  on http://localhost:4321
 ```
 
